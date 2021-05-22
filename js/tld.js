@@ -9,8 +9,8 @@ window.tldjs = {
       })
     }
   },
-  gettld:function(domain){
-    return new Promise((res,rej) => {
+  gettld:async function(domain){
+    return new Promise(async (res,rej) => {
       try{
         var list = await window.tldjs.getlist()
         var slist = list.split("\n")
